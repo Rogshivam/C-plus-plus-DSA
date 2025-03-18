@@ -18,5 +18,4 @@ int main()
     cout << sum(a,b) << endl;
 
     return 0;
-
 }
