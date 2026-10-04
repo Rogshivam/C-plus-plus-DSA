@@ -1,38 +1,25 @@
 #include<iostream>
-#include <string>
-#include <vector>
-
+#include<algorithm>
+#include<vector>
 using namespace std;
 
-struct Corners{
-    float a, b, c, d;
-};
+int main()
+{
+    vector<int> nums ;
+    vector<string> heros {"batman", "flash", "superman", "robin"};
+   nums.push_back(5);
+   nums.push_back(6);
+   nums.push_back(7);
+   nums.push_back(8);
 
-ostream& operator<<(ostream& stream, const Corners& corner){
-    stream << corner.a << "" << corner.b << " " << corner.c << " " << corner.d;
-    return stream;
-}
-int main() {
-    vector<int> inty;
-    inty.push_back(2);
-    inty.push_back(3);
-    inty.push_back(4);
-    inty.push_back(5);
-    
+   for(int i = 0; i <=5; ++i){
+    nums.push_back(i);
+   }
+   cout << nums.size() << endl << nums.capacity() << endl << nums.max_size() << endl;
 
-    for (auto i = inty.begin(); i != inty.end(); ++i) {
-        cout << *i << endl;
-    }
-
-    vector<Corners> corners;
-
-    corners.push_back({1,2,3,4});
-    corners.push_back({5,6,7,8});
-
-    for (int i = 0; i < corners.size(); ++i ){
-        cout << corners[i] << endl;
-    }
-    return 0;
-
-
+   cout << nums.empty() << endl;
+   for (auto i = nums.begin(); i != nums.end(); ++i) {
+    cout << *i << " ";
+   }
+   return 0;
 }
